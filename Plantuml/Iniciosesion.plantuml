@@ -1,0 +1,17 @@
+@startuml
+left to right direction
+actor Usuario as U
+actor Google as G
+boundary "Aplicación" as App
+control "Sistema" as S
+
+U --> App: Inicia sesión con Google
+App --> S: Petición de inicio de sesión con Google
+S --> G: Petición de autenticación
+G --> S: Respuesta de autenticación
+S --> App: Usuario autenticado
+S --> App: Usuario no registrado
+App --> S: Datos de usuario
+S --> App: Usuario registrado
+
+@enduml

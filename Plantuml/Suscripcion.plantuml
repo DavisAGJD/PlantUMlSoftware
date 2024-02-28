@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+actor Usuario as U
+boundary "Interfaz de Suscripción" as IS
+control "Sistema" as S
+
+U --> IS: Inicia proceso de suscripción
+IS --> U: Solicita datos de suscripción
+U --> IS: Ingresa datos de suscripción
+IS --> S: Petición de datos de suscripción
+S --> IS: Confirma recepción de datos
+IS --> S: Verifica datos de suscripción
+S --> IS: Confirma verificación de datos
+IS --> S: Solicita procesamiento de pago
+S --> IS: Confirma procesamiento de pago
+IS --> U: Confirma suscripción
+
+@enduml

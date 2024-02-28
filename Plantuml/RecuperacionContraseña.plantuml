@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+actor Usuario as U
+boundary "Aplicación" as App
+control "Sistema" as S
+
+U --> App: Solicita recuperación de contraseña
+App --> S: Petición de recuperación de contraseña
+S --> App: Envía instrucciones de recuperación
+App --> U: Muestra instrucciones de recuperación
+U --> App: Sigue instrucciones de recuperación
+App --> S: Envía nueva contraseña
+S --> App: Confirma actualización de contraseña
+App --> U: Confirma actualización de contraseña
+
+@enduml

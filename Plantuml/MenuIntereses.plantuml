@@ -1,0 +1,14 @@
+@startuml
+left to right direction
+actor Usuario as U
+boundary "Interfaz de Ropa" as IR
+control "Sistema" as S
+
+U --> IR: Explora estilos de ropa
+IR --> U: Muestra estilos de ropa
+U --> IR: Selecciona estilos de ropa
+IR --> S: Petición de feed relacionado
+S --> IR: Genera feed relacionado
+IR --> U: Muestra feed relacionado
+
+@enduml

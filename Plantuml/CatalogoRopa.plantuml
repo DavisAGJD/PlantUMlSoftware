@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+actor Usuario as U
+boundary "Interfaz de Inicio" as II
+control "Sistema" as S
+
+U --> II: Explora catálogos de ropa
+II --> S: Petición de mostrar catálogos
+S --> II: Muestra catálogos disponibles
+U --> II: Selecciona un catálogo
+II --> S: Petición de mostrar detalles del catálogo seleccionado
+S --> II: Muestra detalles del catálogo seleccionado
+U --> II: Explora detalles del catálogo
+II --> S: Petición de mostrar prendas del catálogo
+S --> II: Muestra prendas del catálogo
+U --> II: Explora prendas del catálogo
+II --> S: Petición de mostrar detalles de la prenda seleccionada
+S --> II: Muestra detalles de la prenda seleccionada
+
+@enduml

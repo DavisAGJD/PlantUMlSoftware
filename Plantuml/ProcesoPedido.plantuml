@@ -1,0 +1,22 @@
+@startuml
+left to right direction
+actor Usuario as U
+boundary "Interfaz de Pedido" as IP
+control "Sistema" as S
+
+U --> IP: Selecciona productos
+IP --> U: Muestra productos disponibles
+U --> IP: Selecciona producto(s) y tallas
+IP --> S: Petición de verificar disponibilidad
+S --> IP: Verifica disponibilidad de productos
+IP --> U: Muestra disponibilidad de productos
+U --> IP: Ingresa dirección de envío/punto de recogida
+IP --> S: Petición de validar dirección
+S --> IP: Valida dirección de envío
+IP --> U: Muestra confirmación de dirección
+U --> IP: Confirma dirección
+IP --> S: Petición de confirmar pedido
+S --> IP: Confirma pedido
+IP --> U: Confirma pedido
+
+@enduml
